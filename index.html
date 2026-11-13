@@ -3,68 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samuel | Data & Software Engineer</title>
+    <title>Samuel // Portfolio Cyberpunk</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Fuente Google Fonts para estilo tecnológico -->
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="scanlines"></div>
-    
+    <div class="grid-overlay"></div>
+
     <header class="hud-header">
-        <div class="logo">SYS_CORE // 2026</div>
+        <div class="logo-box">
+            <span class="pulse-dot"></span>
+            <span class="logo-text">SYS_CORE // SAMUEL.DEV</span>
+        </div>
         <nav class="hud-nav">
-            <a href="#about">[01. PROFILE]</a>
+            <a href="#hero">[01. HOME]</a>
             <a href="#skills">[02. STACK]</a>
-            <a href="#projects">[03. REPOS]</a>
-            <a href="#terminal">[04. TERMINAL]</a>
+            <a href="#projects">[03. PROJECTS]</a>
+            <a href="#terminal-section">[04. TERMINAL]</a>
         </nav>
     </header>
 
-    <main class="container">
-        <section id="hero" class="hero-card">
-            <div class="status-badge"><span class="pulse"></span> SYSTEM ONLINE</div>
-            <h1>SAMUEL</h1>
-            <p class="subtitle">Software Developer & Data Engineer</p>
-            <p class="bio">Especializado en ingeniería de datos, backend escalable y arquitecturas modernas en entornos cloud.</p>
-            <div class="cta-group">
-                <a href="#terminal" class="btn primary">Abrir Terminal</a>
-                <a href="https://github.com/tu-usuario" target="_blank" class="btn secondary">GitHub Profile</a>
+    <main class="main-container">
+        <section id="hero" class="hero-panel">
+            <div class="panel-header"><span>SEC_01 // IDENTIFICATION</span></div>
+            <div class="hero-content">
+                <div class="badge-online">SYSTEM ONLINE // READY</div>
+                <h1>SAMUEL</h1>
+                <p class="role-title">Software Developer & Data Engineer</p>
+                <p class="hero-desc">Especializado en ingeniería de datos, arquitecturas backend escalables, bases de datos robustas y entornos Cloud.</p>
+                <div class="btn-group">
+                    <a href="#terminal-section" class="cyber-btn primary">Iniciar Terminal</a>
+                    <a href="https://github.com/tu-usuario" target="_blank" class="cyber-btn secondary">GitHub Profile</a>
+                </div>
             </div>
         </section>
 
-        <section id="skills" class="grid-section">
-            <h2>// CORE TECH STACK</h2>
-            <div class="chips">
-                <span class="chip">Java / Spring Boot</span>
-                <span class="chip">Kotlin / Android</span>
-                <span class="chip">Python / PySpark</span>
-                <span class="chip">Scala / Databricks</span>
-                <span class="chip">SQL Server / PostgreSQL</span>
-                <span class="chip">Docker & Azure</span>
+        <section id="skills" class="hud-panel">
+            <div class="panel-header"><span>SEC_02 // CORE_TECH_STACK</span></div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Backend & Lenguajes</h3>
+                    <p>Java, Spring Boot, Kotlin, Python, Scala</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Data Engineering</h3>
+                    <p>PySpark, Databricks, SQL Server, PostgreSQL, T-SQL</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Cloud & DevOps</h3>
+                    <p>Docker, Azure, Git, Gradle, Linux</p>
+                </div>
             </div>
         </section>
 
-        <section id="terminal" class="terminal-section">
-            <h2>// INTERACTIVE TERMINAL</h2>
+        <section id="projects" class="hud-panel">
+            <div class="panel-header"><span>SEC_03 // FEATURED_PROJECTS</span></div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>CalcUp</h3>
+                    <p>App Android desarrollada en Kotlin, Supabase y Gradle (TFG). Gestión y cálculo avanzado.</p>
+                    <span class="tag">Kotlin</span><span class="tag">Supabase</span>
+                </div>
+                <div class="project-card">
+                    <h3>Data Pipelines</h3>
+                    <p>Procesamiento de datos distribuidos con PySpark y arquitecturas en Azure Databricks.</p>
+                    <span class="tag">Spark</span><span class="tag">Scala</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="terminal-section" class="hud-panel terminal-wrapper">
+            <div class="panel-header"><span>SEC_04 // INTERACTIVE_CONSOLE</span></div>
             <div class="terminal-box">
-                <div class="terminal-header">
+                <div class="terminal-top">
                     <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-                    <span class="terminal-title">samuel@nexus-core:~</span>
+                    <span class="term-title">samuel@nexus-core:~#</span>
                 </div>
                 <div id="terminal-output" class="terminal-output">
-                    <p>Bienvenido al sistema v2.6. Escribe <strong>'help'</strong> para ver los comandos disponibles.</p>
+                    <p>Nexus OS [Versión 2026.4]</p>
+                    <p>Escribe <strong>'help'</strong> para listar los comandos de sistema.</p>
                 </div>
-                <div class="terminal-input-line">
+                <div class="terminal-input-row">
                     <span class="prompt">$</span>
-                    <input type="text" id="terminal-input" autofocus placeholder="Escribe un comando...">
+                    <input type="text" id="terminal-input" placeholder="Escribe un comando aquí..." autocomplete="off">
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Samuel. Desplegado en GitHub Pages.</p>
+        <p>// SECURE CONNECTION ESTABLISHED // &copy; 2026 SAMUEL</p>
     </footer>
 
     <script src="script.js"></script>

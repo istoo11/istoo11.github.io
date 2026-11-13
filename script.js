@@ -2,36 +2,37 @@ const inputField = document.getElementById('terminal-input');
 const outputContainer = document.getElementById('terminal-output');
 
 const commands = {
-    help: "Comandos disponibles: <strong>about</strong>, <strong>skills</strong>, <strong>projects</strong>, <strong>clear</strong>, <strong>contact</strong>",
-    about: "Samuel -> Desarrollador de Software y Ingeniero de Datos con enfoque en arquitecturas robustas y rendimiento.",
-    skills: "Stack principal: Java, Kotlin, Python, Scala, SQL Server, PostgreSQL, Docker, Azure Databricks.",
-    projects: "Repos destacados: CalcUp (Android/Supabase), pipelines Big Data con PySpark, y sistemas distribuidos.",
-    contact: "Email profesional / GitHub: Revisa los enlaces directos en el perfil superior."
+    help: "Comandos disponibles: <br>&nbsp;&nbsp;<strong>about</strong> - Información profesional<br>&nbsp;&nbsp;<strong>skills</strong> - Stack tecnológico principal<br>&nbsp;&nbsp;<strong>projects</strong> - Proyectos destacados (CalcUp, Big Data)<br>&nbsp;&nbsp;<strong>contact</strong> - Enlaces y contacto<br>&nbsp;&nbsp;<strong>clear</strong> - Limpia la terminal",
+    about: "Samuel -> Desarrollador de Software e Ingeniero de Datos enfocado en alto rendimiento, arquitecturas escalables y entornos Cloud.",
+    skills: "Stack: Java / Spring Boot, Kotlin (Android), Python / PySpark, Scala / Databricks, SQL Server / PostgreSQL, Docker, Azure.",
+    projects: "1. CalcUp (App Android TFG con Kotlin y Supabase).<br>2. Pipelines Big Data con PySpark y Azure Databricks.<br>3. Portfolio Cyberpunk interactivo con GitHub Pages.",
+    contact: "GitHub: github.com/tu-usuario | LinkedIn disponible en el perfil superior."
 };
 
-inputField.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        const query = inputField.value.trim().toLowerCase();
-        
-        // Mostrar comando introducido
-        const userCommandP = document.createElement('p');
-        userCommandP.innerHTML = `<span style="color: #00f0ff;">$</span> ${inputField.value}`;
-        outputContainer.appendChild(userCommandP);
+if (inputField) {
+    inputField.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            const query = inputField.value.trim().toLowerCase();
+            
+            const userP = document.createElement('p');
+            userP.innerHTML = `<span style="color: var(--neon-cyan);">$</span> ${inputField.value}`;
+            outputContainer.appendChild(userP);
 
-        if (query === 'clear') {
-            outputContainer.innerHTML = '<p>Terminal reiniciada.</p>';
-        } else if (commands[query]) {
-            const responseP = document.createElement('p');
-            responseP.innerHTML = commands[query];
-            outputContainer.appendChild(responseP);
-        } else if (query !== '') {
-            const errorP = document.createElement('p');
-            errorP.style.color = '#ff0055';
-            errorP.innerHTML = `Comando no reconocido: '${query}'. Escribe <strong>'help'</strong>.`;
-            outputContainer.appendChild(errorP);
+            if (query === 'clear') {
+                outputContainer.innerHTML = '<p>Terminal reiniciada.</p>';
+            } else if (commands[query]) {
+                const resP = document.createElement('p');
+                resP.innerHTML = commands[query];
+                outputContainer.appendChild(resP);
+            } else if (query !== '') {
+                const errP = document.createElement('p');
+                errP.style.color = 'var(--neon-pink)';
+                errP.innerHTML = `Comando erróneo: '${query}'. Escribe <strong>'help'</strong> para ver la lista de comandos.`;
+                outputContainer.appendChild(errP);
+            }
+
+            inputField.value = '';
+            outputContainer.scrollTop = outputContainer.scrollHeight;
         }
-
-        inputField.value = '';
-        outputContainer.scrollTop = outputContainer.scrollHeight;
-    }
-});
+    });
+}
