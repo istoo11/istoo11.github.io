@@ -5,7 +5,6 @@ function updateClock() {
     const clockEl = document.getElementById('system-clock');
     if (clockEl) clockEl.textContent = timeString;
 
-    // Randomize CPU load slightly for HUD realism
     const cpuEl = document.getElementById('cpu-load');
     if (cpuEl) {
         const randomLoad = Math.floor(Math.random() * 15) + 10;
@@ -20,33 +19,34 @@ const terminalOutput = document.getElementById('terminal-output');
 const terminalInput = document.getElementById('terminal-input');
 
 const systemResponses = {
-    'help': `<span class="text-cyber-cyan font-bold">AVAILABLE COMMANDS:</span><br>
-             - <strong class="text-cyber-emerald">about</strong>: Display professional bio & background<br>
-             - <strong class="text-cyber-emerald">skills</strong>: List core technical stack & proficiency<br>
-             - <strong class="text-cyber-emerald">projects</strong>: View featured repositories & apps<br>
-             - <strong class="text-cyber-emerald">education</strong>: Show Tajamar Tech & DAM credentials<br>
-             - <strong class="text-cyber-emerald">contact</strong>: Get direct communication links<br>
-             - <strong class="text-cyber-emerald">sudo hire</strong>: Executive recruitment override<br>
-             - <strong class="text-cyber-emerald">clear</strong>: Wipe terminal buffer`,
-    'about': `<span class="text-cyber-cyan">SAMUEL // AI & Big Data Engineer & Master's student at Tajamar Tech.</span><br>
+    'ayuda': `<span class="text-cyber-cyan font-bold">COMANDOS DISPONIBLES:</span><br>
+                - <strong class="text-cyber-emerald">sobre</strong>: Conoce mi perfil como desarrollador<br>
+                - <strong class="text-cyber-emerald">skills</strong>: Tecnologías y habilidades técnicas<br>
+                - <strong class="text-cyber-emerald">proyectos</strong>: Proyectos personales y repositorios GitHub<br>
+                - <strong class="text-cyber-emerald">educacion</strong>: Formación académica y certificaciones<br>
+                - <strong class="text-cyber-emerald">experiencia</strong>: Experiencia profesional<br>
+                - <strong class="text-cyber-emerald">contacto</strong>: Enlaces para contactar conmigo<br>
+                - <strong class="text-cyber-emerald">sudo contratar</strong>: ¿Buscas desarrollador? ¡Hablemos!<br>
+                - <strong class="text-cyber-emerald">clear</strong>: Limpiar la terminal`,
+    'sobre': `<span class="text-cyber-cyan">SAMUEL // AI & Big Data Engineer & Master's student at Tajamar Tech.</span><br>
               Passionate about building scalable machine learning pipelines, distributed big data architectures, and robust multiplatform software.`,
     'skills': `<span class="text-cyber-cyan">CORE SKILLS MATRIX:</span><br>
                [Big Data]: Azure Databricks, Apache Spark, Scala, SQL, Data Warehousing<br>
                [AI & ML]: Python, TensorFlow, PyTorch, LLMs, Predictive Modeling<br>
                [Backend]: Java, Spring Boot, Supabase, PostgreSQL<br>
                [DevOps]: Docker, Git, GitHub Actions, Linux/Bash`,
-    'projects': `<span class="text-cyber-cyan">FEATURED REPOSITORIES:</span><br>
+    'projectos': `<span class="text-cyber-cyan">FEATURED REPOSITORIES:</span><br>
                  1. <strong class="text-emerald-400">CalcUp</strong> - Kotlin & Supabase Android Calculator & Cloud App<br>
                  2. <strong class="text-emerald-400">Distributed AI Pipeline</strong> - Azure Databricks & PySpark data lake<br>
                  3. <strong class="text-emerald-400">Neural Spring Boot API</strong> - Containerized microservices architecture`,
-    'education': `<span class="text-cyber-cyan">ACADEMIC RECORDS:</span><br>
+    'educacion': `<span class="text-cyber-cyan">ACADEMIC RECORDS:</span><br>
                   - Master in AI & Big Data @ Tajamar Tech (Madrid, 2025 - Present)<br>
                   - DAM (Desarrollo de Aplicaciones Multiplataforma) Graduate`,
-    'contact': `<span class="text-cyber-cyan">SECURE CHANNELS:</span><br>
+    'contacto': `<span class="text-cyber-cyan">SECURE CHANNELS:</span><br>
                 - Email: samuel@ai-engineer.dev<br>
                 - GitHub: github.com/samuel-ai<br>
                 - LinkedIn: linkedin.com/in/samuel-ai-data`,
-    'sudo hire': `<span class="text-cyber-emerald font-bold">&gt;&gt; ACCESS GRANTED: EXECUTING RECRUITMENT PROTOCOL.</span><br>
+    'sudo contratar': `<span class="text-cyber-emerald font-bold">&gt;&gt; ACCESS GRANTED: EXECUTING RECRUITMENT PROTOCOL.</span><br>
                   Samuel is currently available for AI Engineering, Big Data, and Full-Stack roles! Contact him directly via email or LinkedIn.`
 };
 

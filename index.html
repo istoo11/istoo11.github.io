@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samuel Roman</title>
+    <title>AI & Big Data Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/tailwind-config.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
@@ -12,6 +12,7 @@
 </head>
 <body class="cyber-grid min-h-screen relative selection:bg-cyber-cyan selection:text-black">
 
+    <!-- Scanline overlay -->
     <div class="scanlines fixed inset-0 z-50"></div>
 
     <!-- HUD Top Bar -->
@@ -21,16 +22,9 @@
                 <span class="inline-block w-3 h-3 rounded-full bg-cyber-emerald animate-ping"></span>
                 <span class="font-orbitron font-bold tracking-widest text-cyber-cyan">SYS.STATUS: ONLINE</span>
             </div>
-            <span class="hidden md:inline text-cyber-dim">|</span>
-            <span class="hidden md:inline text-cyber-emerald">HOST: TAJAMAR-TECH-CLUSTER</span>
         </div>
         
         <div class="flex items-center space-x-6">
-            <div class="hidden lg:flex items-center space-x-2 text-cyber-dim">
-                <span>CPU: <strong class="text-cyber-cyan" id="cpu-load">14%</strong></span>
-                <span>RAM: <strong class="text-cyber-emerald">8.4GB/16GB</strong></span>
-                <span>SECURE: <strong class="text-cyber-purple">AES-256</strong></span>
-            </div>
             <div class="text-cyber-cyan font-orbitron" id="system-clock">00:00:00 UTC</div>
         </div>
     </header>
@@ -38,18 +32,18 @@
     <!-- Navigation / Quick Menu -->
     <nav class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#" class="font-orbitron font-extrabold text-xl text-cyber-cyan glow-text-cyan flex items-center gap-2">
-            <i class="fa-solid fa-terminal"></i> SAMUEL.AI
+            <i class="fa-solid fa-terminal"></i> SAMUEL
         </a>
         <div class="hidden md:flex space-x-6 text-sm">
-            <a href="#hero" class="hover:text-cyber-cyan transition-colors">// 01.INIT</a>
-            <a href="#terminal" class="hover:text-cyber-cyan transition-colors">// 02.CLI_CONSOLE</a>
-            <a href="#skills" class="hover:text-cyber-cyan transition-colors">// 03.SKILLS_MATRIX</a>
-            <a href="#projects" class="hover:text-cyber-cyan transition-colors">// 04.PROJECTS</a>
-            <a href="#timeline" class="hover:text-cyber-cyan transition-colors">// 05.TIMELINE</a>
-            <a href="#contact" class="hover:text-cyber-cyan transition-colors">// 06.CONTACT</a>
+            <a href="#hero" class="hover:text-cyber-cyan transition-colors">// 01.INICIO</a>
+            <a href="#terminal" class="hover:text-cyber-cyan transition-colors">// 02.CONSOLA</a>
+            <a href="#skills" class="hover:text-cyber-cyan transition-colors">// 03.SKILLS</a>
+            <a href="#projects" class="hover:text-cyber-cyan transition-colors">// 04.PROYECTOS</a>
+            <a href="#timeline" class="hover:text-cyber-cyan transition-colors">// 05.HISTORIAL</a>
+            <a href="#contact" class="hover:text-cyber-cyan transition-colors">// 06.CONTACTO</a>
         </div>
         <a href="#contact" class="px-4 py-2 text-xs font-bold font-orbitron border border-cyber-cyan text-cyber-cyan hover:bg-cyber-cyan hover:text-black transition-all shadow-neon-cyan rounded">
-            INITIALIZE CONTACT
+            INICIAR CONTACTO
         </a>
     </nav>
 
@@ -60,13 +54,13 @@
             <div class="lg:col-span-7 space-y-6">
                 <div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-cyber-cyan/10 border border-cyber-cyan/30 text-cyber-cyan text-xs">
                     <i class="fa-solid fa-microchip"></i>
-                    <span>AI & BIG DATA ENGINEER // MASTER'S STUDENT</span>
+                    <span>AI & BIG DATA ENGINEER</span>
                 </div>
                 <h1 class="font-orbitron text-4xl sm:text-6xl font-black tracking-wider leading-tight">
-                    HELLO, I'M <span class="text-cyber-cyan glow-text-cyan">SAMUEL</span>
+                    HOLA, SOY <span class="text-cyber-cyan glow-text-cyan">SAMUEL</span>
                 </h1>
                 <p class="text-cyber-dim text-base sm:text-lg max-w-2xl leading-relaxed">
-                    Architecting high-performance machine learning pipelines, scalable big data systems, and futuristic mobile applications. Currently engineering next-gen AI solutions at <span class="text-cyber-emerald font-bold">Tajamar Tech</span>.
+                    Ingeniero de IA y Big Data. Arquitectando pipelines de aprendizaje automático de alto rendimiento, sistemas de big data escalables y aplicaciones móviles futuristas. Actualmente desarrollando soluciones de IA de próxima generación en <span class="text-cyber-emerald font-bold">Tajamar Tech</span>.
                 </p>
 
                 <!-- Terminal Typing simulation box -->
@@ -81,14 +75,14 @@
                     </div>
                     <div id="typing-container" class="text-cyber-cyan min-h-[4rem]">
                         <span class="text-cyber-emerald">&gt;</span> Initializing neural link...<br>
-                        <span class="text-cyber-emerald">&gt;</span> Loading datasets & models: Python, Scala, Spark, Databricks...<br>
+                        <span class="text-cyber-emerald">&gt;</span> Loading datasets & models: Python, Spark, Databricks...<br>
                         <span class="text-cyber-emerald">&gt;</span> <span id="typed-text">System ready for deployment.</span><span class="animate-pulse">_</span>
                     </div>
                 </div>
 
                 <div class="flex flex-wrap gap-4 pt-2">
                     <a href="#projects" class="px-6 py-3 bg-cyber-cyan text-black font-orbitron font-bold text-sm rounded hover:bg-cyber-emerald transition-all shadow-neon-cyan flex items-center gap-2">
-                        <i class="fa-solid fa-code-branch"></i> EXPLORE PROJECTS
+                        <i class="fa-solid fa-code-branch"></i> MIS PROYECTOS
                     </a>
                     <a href="#terminal" class="px-6 py-3 border border-cyber-emerald text-cyber-emerald font-orbitron font-bold text-sm rounded hover:bg-cyber-emerald hover:text-black transition-all shadow-neon-emerald flex items-center gap-2">
                         <i class="fa-solid fa-terminal"></i> OPEN CLI TERMINAL
@@ -107,8 +101,8 @@
 
                     <div class="text-center space-y-4">
                         <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-tr from-cyber-cyan to-cyber-emerald p-1 shadow-neon-cyan">
-                            <div class="w-full h-full rounded-full bg-cyber-bg flex items-center justify-center overflow-hidden">
-                                <i class="fa-solid fa-user-astronaut text-6xl text-cyber-cyan"></i>
+                            <div class="w-full h-full rounded-full bg-cyber-bg overflow-hidden">
+                                <img src="img/perfil.jpeg" alt="Foto de Perfil" class="w-full h-full object-cover">
                             </div>
                         </div>
                         <div>
@@ -130,7 +124,7 @@
                             </div>
                             <div>
                                 <span class="text-cyber-dim">CORE:</span><br>
-                                <strong class="text-white">Python / Scala</strong>
+                                <strong class="text-white">Python / Java</strong>
                             </div>
                         </div>
                     </div>
@@ -142,9 +136,9 @@
         <section id="terminal" class="space-y-6">
             <div class="flex items-center justify-between border-b border-cyber-cyan/30 pb-4">
                 <h2 class="font-orbitron text-2xl font-bold flex items-center gap-3">
-                    <span class="text-cyber-cyan">// 02.</span> INTERACTIVE CLI TERMINAL
+                    <span class="text-cyber-cyan">// 02.</span> TERMINAL INTERACTIVO
                 </h2>
-                <span class="text-xs text-cyber-dim hidden sm:inline">Type <code class="text-cyber-cyan">help</code> for available commands</span>
+                <span class="text-xs text-cyber-dim hidden sm:inline">Escribe <code class="text-cyber-cyan">help</code> para ver los comandos disponibles</span>
             </div>
 
             <div class="glass-panel rounded-lg border border-cyber-cyan/40 shadow-neon-cyan overflow-hidden">
@@ -163,15 +157,15 @@
 
                 <!-- Terminal Output Window -->
                 <div id="terminal-output" class="p-4 sm:p-6 font-mono text-xs sm:text-sm h-72 sm:h-96 overflow-y-auto space-y-3 bg-cyber-bg/90">
-                    <div class="text-cyber-dim">Welcome to SamuelOS v4.2.0 [AI & Big Data Core].</div>
-                    <div class="text-cyber-dim">Type <span class="text-cyber-cyan font-bold">help</span> to view system commands or click quick suggestions below.</div>
-                    <div class="text-cyber-emerald">&gt; System initialized successfully. Ready for input...</div>
+                    <div class="text-cyber-dim">Bienvenido a SamuelOS v4.2.0 [Núcleo de IA y Big Data].</div>
+                    <div class="text-cyber-dim">Escribe <span class="text-cyber-cyan font-bold">help</span> para ver los comandos disponibles o haz clic en las sugerencias rápidas a continuación.</div>
+                    <div class="text-cyber-emerald">&gt; Sistema inicializado correctamente. Listo para recibir entradas...</div>
                 </div>
 
                 <!-- Terminal Input Form -->
                 <form id="terminal-form" onsubmit="handleCommand(event)" class="bg-cyber-card p-3 border-t border-cyber-border flex items-center gap-2">
                     <span class="text-cyber-cyan font-bold">samuel@portfolio:~$</span>
-                    <input type="text" id="terminal-input" autocomplete="off" autofocus class="bg-transparent flex-1 focus:outline-none text-cyber-cyan font-mono text-sm" placeholder="try 'help', 'skills', 'projects', 'contact'...">
+                    <input type="text" id="terminal-input" autocomplete="off" autofocus class="bg-transparent flex-1 focus:outline-none text-cyber-cyan font-mono text-sm" placeholder="try 'ayuda', 'skills', 'proje', 'contacto'...">
                     <button type="submit" class="px-4 py-1.5 bg-cyber-cyan/20 border border-cyber-cyan text-cyber-cyan hover:bg-cyber-cyan hover:text-black font-orbitron text-xs rounded transition-all">
                         EXEC
                     </button>
@@ -179,177 +173,297 @@
 
                 <!-- Quick Command Buttons -->
                 <div class="bg-cyber-bg p-3 border-t border-cyber-border flex flex-wrap gap-2 text-xs">
-                    <span class="text-cyber-dim self-center">Quick Exec:</span>
-                    <button type="button" onclick="runCommand('help')" class="px-2.5 py-1 rounded bg-cyber-card border border-cyber-border text-cyber-cyan hover:border-cyber-cyan transition-all">help</button>
+                    <span class="text-cyber-dim self-center">Ejecucion rápida:</span>
+                    <button type="button" onclick="runCommand('ayuda')" class="px-2.5 py-1 rounded bg-cyber-card border border-cyber-border text-cyber-cyan hover:border-cyber-cyan transition-all">ayuda</button>
                     <button type="button" onclick="runCommand('skills')" class="px-2.5 py-1 rounded bg-cyber-card border border-cyber-border text-cyber-cyan hover:border-cyber-cyan transition-all">skills</button>
-                    <button type="button" onclick="runCommand('projects')" class="px-2.5 py-1 rounded bg-cyber-card border border-cyber-border text-cyber-cyan hover:border-cyber-cyan transition-all">projects</button>
-                    <button type="button" onclick="runCommand('education')" class="px-2.5 py-1 rounded bg-cyber-card border border-cyber-border text-cyber-cyan hover:border-cyber-cyan transition-all">education</button>
-                    <button type="button" onclick="runCommand('contact')" class="px-2.5 py-1 rounded bg-cyber-card border border-cyber-border text-cyber-cyan hover:border-cyber-cyan transition-all">contact</button>
-                    <button type="button" onclick="runCommand('sudo hire')" class="px-2.5 py-1 rounded bg-cyber-card border border-cyber-emerald text-cyber-emerald hover:bg-cyber-emerald hover:text-black transition-all">sudo hire</button>
+                    <button type="button" onclick="runCommand('projectos')" class="px-2.5 py-1 rounded bg-cyber-card border border-cyber-border text-cyber-cyan hover:border-cyber-cyan transition-all">proyectos</button>
+                    <button type="button" onclick="runCommand('educacion')" class="px-2.5 py-1 rounded bg-cyber-card border border-cyber-border text-cyber-cyan hover:border-cyber-cyan transition-all">educacion</button>
+                    <button type="button" onclick="runCommand('contacto')" class="px-2.5 py-1 rounded bg-cyber-card border border-cyber-border text-cyber-cyan hover:border-cyber-cyan transition-all">contacto</button>
+                    <button type="button" onclick="runCommand('sudo contratar')" class="px-2.5 py-1 rounded bg-cyber-card border border-cyber-emerald text-cyber-emerald hover:bg-cyber-emerald hover:text-black transition-all">sudo contratar</button>
                 </div>
             </div>
         </section>
-
-        <!-- 3. Skills Matrix Section -->
+        
+        <!-- 3. Matriz de conocimientos y tecnologías -->
         <section id="skills" class="space-y-8">
             <div class="flex items-center justify-between border-b border-cyber-cyan/30 pb-4">
                 <h2 class="font-orbitron text-2xl font-bold flex items-center gap-3">
-                    <span class="text-cyber-cyan">// 03.</span> SKILLS MATRIX & TECH STACK
+                    <span class="text-cyber-cyan">// 03.</span> MATRIZ DE CONOCIMIENTOS
                 </h2>
-                <span class="text-xs text-cyber-emerald">PROFICIENCY ENGINE</span>
+                <span class="text-xs text-cyber-emerald">PERFIL TÉCNICO</span>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Skill Category 1: Big Data & Cloud -->
+
+                <!-- 1. Programación -->
                 <div class="glass-panel p-6 rounded-xl border border-cyber-cyan/30 space-y-4">
                     <div class="flex items-center space-x-3 text-cyber-cyan">
-                        <i class="fa-solid fa-database text-2xl"></i>
-                        <h3 class="font-orbitron font-bold text-lg">Big Data & Cloud</h3>
+                        <i class="fa-solid fa-code text-2xl"></i>
+                        <h3 class="font-orbitron font-bold text-lg">Programación</h3>
                     </div>
-                    <p class="text-xs text-cyber-dim">Distributed systems, processing pipelines & cloud infrastructure.</p>
+                    <p class="text-xs text-cyber-dim">
+                        Desarrollo de software, programación orientada a objetos y construcción de aplicaciones.
+                    </p>
+
+                    <div class="space-y-3 pt-2">
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span>Java</span>
+                                <span class="text-cyber-cyan">75%</span>
+                            </div>
+                            <div class="w-full bg-cyber-card h-2 rounded-full overflow-hidden border border-cyber-border">
+                                <div class="bg-gradient-to-r from-cyber-cyan to-cyber-emerald h-full rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span>Python</span>
+                                <span class="text-cyber-cyan">70%</span>
+                            </div>
+                            <div class="w-full bg-cyber-card h-2 rounded-full overflow-hidden border border-cyber-border">
+                                <div class="bg-gradient-to-r from-cyber-cyan to-cyber-emerald h-full rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span>Spring Boot</span>
+                                <span class="text-cyber-cyan">35%</span>
+                            </div>
+                            <div class="w-full bg-cyber-card h-2 rounded-full overflow-hidden border border-cyber-border">
+                                <div class="bg-gradient-to-r from-cyber-cyan to-cyber-emerald h-full rounded-full" style="width: 35%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Big Data -->
+                <div class="glass-panel p-6 rounded-xl border border-cyber-emerald/30 space-y-4">
+                    <div class="flex items-center space-x-3 text-cyber-emerald">
+                        <i class="fa-solid fa-database text-2xl"></i>
+                        <h3 class="font-orbitron font-bold text-lg">Big Data</h3>
+                    </div>
+                    <p class="text-xs text-cyber-dim">
+                        Procesamiento de grandes volúmenes de datos, computación distribuida y plataformas de datos.
+                    </p>
+
                     <div class="space-y-3 pt-2">
                         <div>
                             <div class="flex justify-between text-xs mb-1">
                                 <span>Azure Databricks</span>
-                                <span class="text-cyber-cyan">92%</span>
+                                <span class="text-cyber-emerald">70%</span>
                             </div>
                             <div class="w-full bg-cyber-card h-2 rounded-full overflow-hidden border border-cyber-border">
-                                <div class="bg-gradient-to-r from-cyber-cyan to-cyber-emerald h-full rounded-full" style="width: 92%"></div>
+                                <div class="bg-gradient-to-r from-cyber-emerald to-cyber-cyan h-full rounded-full" style="width: 70%"></div>
                             </div>
                         </div>
+
                         <div>
                             <div class="flex justify-between text-xs mb-1">
-                                <span>Apache Spark / Scala</span>
-                                <span class="text-cyber-cyan">88%</span>
+                                <span>Conceptos de Big Data</span>
+                                <span class="text-cyber-emerald">65%</span>
                             </div>
                             <div class="w-full bg-cyber-card h-2 rounded-full overflow-hidden border border-cyber-border">
-                                <div class="bg-gradient-to-r from-cyber-cyan to-cyber-emerald h-full rounded-full" style="width: 88%"></div>
+                                <div class="bg-gradient-to-r from-cyber-emerald to-cyber-cyan h-full rounded-full" style="width: 65%"></div>
                             </div>
                         </div>
+
                         <div>
                             <div class="flex justify-between text-xs mb-1">
-                                <span>SQL & Data Warehousing</span>
-                                <span class="text-cyber-cyan">95%</span>
+                                <span>Ingeniería de datos</span>
+                                <span class="text-cyber-emerald">60%</span>
                             </div>
                             <div class="w-full bg-cyber-card h-2 rounded-full overflow-hidden border border-cyber-border">
-                                <div class="bg-gradient-to-r from-cyber-cyan to-cyber-emerald h-full rounded-full" style="width: 95%"></div>
+                                <div class="bg-gradient-to-r from-cyber-emerald to-cyber-cyan h-full rounded-full" style="width: 60%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Skill Category 2: Artificial Intelligence & ML -->
-                <div class="glass-panel p-6 rounded-xl border border-cyber-emerald/30 space-y-4">
-                    <div class="flex items-center space-x-3 text-cyber-emerald">
-                        <i class="fa-solid fa-brain text-2xl"></i>
-                        <h3 class="font-orbitron font-bold text-lg">AI & Machine Learning</h3>
-                    </div>
-                    <p class="text-xs text-cyber-dim">Predictive modeling, neural networks & intelligent automation.</p>
-                    <div class="space-y-3 pt-2">
-                        <div>
-                            <div class="flex justify-between text-xs mb-1">
-                                <span>Python & Data Science</span>
-                                <span class="text-cyber-emerald">96%</span>
-                            </div>
-                            <div class="w-full bg-cyber-card h-2 rounded-full overflow-hidden border border-cyber-border">
-                                <div class="bg-gradient-to-r from-cyber-emerald to-cyber-cyan h-full rounded-full" style="width: 96%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between text-xs mb-1">
-                                <span>TensorFlow / PyTorch</span>
-                                <span class="text-cyber-emerald">85%</span>
-                            </div>
-                            <div class="w-full bg-cyber-card h-2 rounded-full overflow-hidden border border-cyber-border">
-                                <div class="bg-gradient-to-r from-cyber-emerald to-cyber-cyan h-full rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between text-xs mb-1">
-                                <span>LLMs & Prompt Engineering</span>
-                                <span class="text-cyber-emerald">90%</span>
-                            </div>
-                            <div class="w-full bg-cyber-card h-2 rounded-full overflow-hidden border border-cyber-border">
-                                <div class="bg-gradient-to-r from-cyber-emerald to-cyber-cyan h-full rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Skill Category 3: Backend & Mobile -->
+                <!-- 3. Bases de datos y BI -->
                 <div class="glass-panel p-6 rounded-xl border border-cyber-purple/30 space-y-4">
                     <div class="flex items-center space-x-3 text-cyber-purple">
-                        <i class="fa-solid fa-server text-2xl"></i>
-                        <h3 class="font-orbitron font-bold text-lg">Backend & Mobile</h3>
+                        <i class="fa-solid fa-chart-line text-2xl"></i>
+                        <h3 class="font-orbitron font-bold text-lg">Datos y BI</h3>
                     </div>
-                    <p class="text-xs text-cyber-dim">Robust APIs, microservices & cross-platform applications.</p>
+                    <p class="text-xs text-cyber-dim">
+                        Gestión de bases de datos, consultas SQL y análisis de información empresarial.
+                    </p>
+
                     <div class="space-y-3 pt-2">
                         <div>
                             <div class="flex justify-between text-xs mb-1">
-                                <span>Java & Spring Boot</span>
-                                <span class="text-cyber-purple">90%</span>
+                                <span>SQL y bases de datos</span>
+                                <span class="text-cyber-purple">80%</span>
                             </div>
                             <div class="w-full bg-cyber-card h-2 rounded-full overflow-hidden border border-cyber-border">
-                                <div class="bg-gradient-to-r from-cyber-purple to-cyber-cyan h-full rounded-full" style="width: 90%"></div>
+                                <div class="bg-gradient-to-r from-cyber-purple to-cyber-cyan h-full rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
+
                         <div>
                             <div class="flex justify-between text-xs mb-1">
-                                <span>Kotlin (Android / Multiplatform)</span>
-                                <span class="text-cyber-purple">88%</span>
+                                <span>SQL Server</span>
+                                <span class="text-cyber-purple">75%</span>
                             </div>
                             <div class="w-full bg-cyber-card h-2 rounded-full overflow-hidden border border-cyber-border">
-                                <div class="bg-gradient-to-r from-cyber-purple to-cyber-cyan h-full rounded-full" style="width: 88%"></div>
+                                <div class="bg-gradient-to-r from-cyber-purple to-cyber-cyan h-full rounded-full" style="width: 75%"></div>
                             </div>
                         </div>
+
                         <div>
                             <div class="flex justify-between text-xs mb-1">
-                                <span>Supabase & PostgreSQL</span>
-                                <span class="text-cyber-purple">92%</span>
+                                <span>Power BI</span>
+                                <span class="text-cyber-purple">60%</span>
                             </div>
                             <div class="w-full bg-cyber-card h-2 rounded-full overflow-hidden border border-cyber-border">
-                                <div class="bg-gradient-to-r from-cyber-purple to-cyber-cyan h-full rounded-full" style="width: 92%"></div>
+                                <div class="bg-gradient-to-r from-cyber-purple to-cyber-cyan h-full rounded-full" style="width: 60%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Skill Category 4: DevOps & Tools -->
+                <!-- 4. Herramientas y desarrollo -->
                 <div class="glass-panel p-6 rounded-xl border border-yellow-500/30 space-y-4">
                     <div class="flex items-center space-x-3 text-yellow-400">
-                        <i class="fa-solid fa-network-wired text-2xl"></i>
-                        <h3 class="font-orbitron font-bold text-lg">DevOps & Tools</h3>
+                        <i class="fa-solid fa-screwdriver-wrench text-2xl"></i>
+                        <h3 class="font-orbitron font-bold text-lg">Herramientas</h3>
                     </div>
-                    <p class="text-xs text-cyber-dim">Containerization, CI/CD pipelines & version control.</p>
+                    <p class="text-xs text-cyber-dim">
+                        Herramientas de desarrollo, control de versiones y trabajo en equipo.
+                    </p>
+
                     <div class="space-y-3 pt-2">
                         <div>
                             <div class="flex justify-between text-xs mb-1">
-                                <span>Docker & Containers</span>
-                                <span class="text-yellow-400">89%</span>
+                                <span>Git y GitHub</span>
+                                <span class="text-yellow-400">75%</span>
                             </div>
                             <div class="w-full bg-cyber-card h-2 rounded-full overflow-hidden border border-cyber-border">
-                                <div class="bg-gradient-to-r from-yellow-500 to-cyber-cyan h-full rounded-full" style="width: 89%"></div>
+                                <div class="bg-gradient-to-r from-yellow-500 to-cyber-cyan h-full rounded-full" style="width: 75%"></div>
                             </div>
                         </div>
+
                         <div>
                             <div class="flex justify-between text-xs mb-1">
-                                <span>Git & GitHub Actions</span>
-                                <span class="text-yellow-400">94%</span>
+                                <span>Scrum y metodologías ágiles</span>
+                                <span class="text-yellow-400">70%</span>
                             </div>
                             <div class="w-full bg-cyber-card h-2 rounded-full overflow-hidden border border-cyber-border">
-                                <div class="bg-gradient-to-r from-yellow-500 to-cyber-cyan h-full rounded-full" style="width: 94%"></div>
+                                <div class="bg-gradient-to-r from-yellow-500 to-cyber-cyan h-full rounded-full" style="width: 70%"></div>
                             </div>
                         </div>
+
                         <div>
                             <div class="flex justify-between text-xs mb-1">
-                                <span>Linux / Bash Scripting</span>
-                                <span class="text-yellow-400">91%</span>
+                                <span>APIs REST</span>
+                                <span class="text-yellow-400">60%</span>
                             </div>
                             <div class="w-full bg-cyber-card h-2 rounded-full overflow-hidden border border-cyber-border">
-                                <div class="bg-gradient-to-r from-yellow-500 to-cyber-cyan h-full rounded-full" style="width: 91%"></div>
+                                <div class="bg-gradient-to-r from-yellow-500 to-cyber-cyan h-full rounded-full" style="width: 60%"></div>
                             </div>
                         </div>
                     </div>
+                </div>
+
+            </div>
+
+            <!-- Certificaciones -->
+            <div class="space-y-6 pt-8">
+                <div class="flex items-center justify-between border-b border-cyber-cyan/30 pb-4">
+                    <h3 class="font-orbitron text-xl font-bold flex items-center gap-3">
+                        <span class="text-cyber-cyan">// 03.1.</span> CERTIFICACIONES MICROSOFT
+                    </h3>
+                    <span class="text-xs text-cyber-emerald">3 CERTIFICACIONES OBTENIDAS</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- DP-800 -->
+                    <div class="glass-panel p-6 rounded-xl border border-cyber-cyan/30 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3 text-cyber-cyan">
+                                <i class="fa-brands fa-microsoft text-2xl"></i>
+                                <span class="font-orbitron font-bold text-lg">DP-800</span>
+                            </div>
+                            <span class="text-xs text-cyber-emerald">OBTENIDA</span>
+                        </div>
+
+                        <h4 class="font-bold text-base">
+                            Desarrollo de soluciones de bases de datos con Azure
+                        </h4>
+
+                        <p class="text-xs text-cyber-dim">
+                            Acredita conocimientos para desarrollar soluciones de bases de datos, trabajar con datos relacionales y aprovechar las capacidades de SQL Server y Azure SQL.
+                        </p>
+
+                        <div class="pt-2 space-y-2">
+                            <span class="text-xs text-cyber-cyan font-bold">COMPETENCIAS</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs px-3 py-1 rounded-full bg-cyber-card border border-cyber-cyan/30">SQL Server</span>
+                                <span class="text-xs px-3 py-1 rounded-full bg-cyber-card border border-cyber-cyan/30">Azure SQL</span>
+                                <span class="text-xs px-3 py-1 rounded-full bg-cyber-card border border-cyber-cyan/30">Desarrollo de datos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DP-700 -->
+                    <div class="glass-panel p-6 rounded-xl border border-cyber-emerald/30 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3 text-cyber-emerald">
+                                <i class="fa-brands fa-microsoft text-2xl"></i>
+                                <span class="font-orbitron font-bold text-lg">DP-700</span>
+                            </div>
+                            <span class="text-xs text-cyber-emerald">OBTENIDA</span>
+                        </div>
+
+                        <h4 class="font-bold text-base">
+                            Ingeniería de datos con Microsoft Fabric
+                        </h4>
+
+                        <p class="text-xs text-cyber-dim">
+                            Acredita conocimientos para implementar soluciones de ingeniería de datos, construir procesos de integración y transformación y gestionar plataformas analíticas con Microsoft Fabric.
+                        </p>
+
+                        <div class="pt-2 space-y-2">
+                            <span class="text-xs text-cyber-emerald font-bold">COMPETENCIAS</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs px-3 py-1 rounded-full bg-cyber-card border border-cyber-emerald/30">Microsoft Fabric</span>
+                                <span class="text-xs px-3 py-1 rounded-full bg-cyber-card border border-cyber-emerald/30">ETL y ELT</span>
+                                <span class="text-xs px-3 py-1 rounded-full bg-cyber-card border border-cyber-emerald/30">Pipelines de datos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DP-750 -->
+                    <div class="glass-panel p-6 rounded-xl border border-cyber-purple/30 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3 text-cyber-purple">
+                                <i class="fa-brands fa-microsoft text-2xl"></i>
+                                <span class="font-orbitron font-bold text-lg">DP-750</span>
+                            </div>
+                            <span class="text-xs text-cyber-emerald">OBTENIDA</span>
+                        </div>
+
+                        <h4 class="font-bold text-base">
+                            Administración de soluciones de datos en Azure
+                        </h4>
+
+                        <p class="text-xs text-cyber-dim">
+                            Acredita conocimientos relacionados con la administración de entornos de datos en Azure, incluyendo la configuración, supervisión y mantenimiento de servicios de datos.
+                        </p>
+
+                        <div class="pt-2 space-y-2">
+                            <span class="text-xs text-cyber-purple font-bold">COMPETENCIAS</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs px-3 py-1 rounded-full bg-cyber-card border border-cyber-purple/30">Azure</span>
+                                <span class="text-xs px-3 py-1 rounded-full bg-cyber-card border border-cyber-purple/30">Administración de datos</span>
+                                <span class="text-xs px-3 py-1 rounded-full bg-cyber-card border border-cyber-purple/30">Seguridad y supervisión</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -575,12 +689,14 @@
 
     </main>
 
+    <!-- Footer -->
     <footer class="border-t border-cyber-cyan/30 glass-panel py-8 mt-20 text-center text-xs text-cyber-dim space-y-2">
-        <p class="font-orbitron text-cyber-cyan">SAMUEL // AI & BIG DATA ENGINEER</p>
-        <p>Optimized for GitHub Pages &bull; Built with Tailwind CSS</p>
+        <p class="font-orbitron text-cyber-cyan">SAMUEL // AI & BIG DATA ENGINEER @ TAJAMAR TECH</p>
+        <p>Optimized for GitHub Pages &bull; Built with Tailwind CSS & Cyberpunk HUD Aesthetics</p>
         <p class="text-[10px] text-cyber-emerald">&copy; 2026 Samuel. All systems nominal.</p>
     </footer>
 
+    <!-- Interactive JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>
