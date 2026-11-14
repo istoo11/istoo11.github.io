@@ -1,3 +1,4 @@
+
 // Real-time clock update
 function updateClock() {
     const now = new Date();
@@ -14,6 +15,7 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
+
 // Terminal logic
 const terminalOutput = document.getElementById('terminal-output');
 const terminalInput = document.getElementById('terminal-input');
@@ -28,41 +30,54 @@ const systemResponses = {
                 - <strong class="text-cyber-emerald">contacto</strong>: Enlaces para contactar conmigo<br>
                 - <strong class="text-cyber-emerald">sudo contratar</strong>: ¿Buscas desarrollador? ¡Hablemos!<br>
                 - <strong class="text-cyber-emerald">clear</strong>: Limpiar la terminal`,
-    'sobre': `<span class="text-cyber-cyan">SAMUEL // AI & Big Data Engineer & Master's student at Tajamar Tech.</span><br>
-              Passionate about building scalable machine learning pipelines, distributed big data architectures, and robust multiplatform software.`,
-    'skills': `<span class="text-cyber-cyan">CORE SKILLS MATRIX:</span><br>
-               [Big Data]: Azure Databricks, Apache Spark, Scala, SQL, Data Warehousing<br>
-               [AI & ML]: Python, TensorFlow, PyTorch, LLMs, Predictive Modeling<br>
-               [Backend]: Java, Spring Boot, Supabase, PostgreSQL<br>
-               [DevOps]: Docker, Git, GitHub Actions, Linux/Bash`,
-    'projectos': `<span class="text-cyber-cyan">FEATURED REPOSITORIES:</span><br>
-                 1. <strong class="text-emerald-400">CalcUp</strong> - Kotlin & Supabase Android Calculator & Cloud App<br>
-                 2. <strong class="text-emerald-400">Distributed AI Pipeline</strong> - Azure Databricks & PySpark data lake<br>
-                 3. <strong class="text-emerald-400">Neural Spring Boot API</strong> - Containerized microservices architecture`,
-    'educacion': `<span class="text-cyber-cyan">ACADEMIC RECORDS:</span><br>
-                  - Master in AI & Big Data @ Tajamar Tech (Madrid, 2025 - Present)<br>
-                  - DAM (Desarrollo de Aplicaciones Multiplataforma) Graduate`,
-    'contacto': `<span class="text-cyber-cyan">SECURE CHANNELS:</span><br>
-                - Email: samuel@ai-engineer.dev<br>
-                - GitHub: github.com/samuel-ai<br>
-                - LinkedIn: linkedin.com/in/samuel-ai-data`,
-    'sudo contratar': `<span class="text-cyber-emerald font-bold">&gt;&gt; ACCESS GRANTED: EXECUTING RECRUITMENT PROTOCOL.</span><br>
-                  Samuel is currently available for AI Engineering, Big Data, and Full-Stack roles! Contact him directly via email or LinkedIn.`
+
+    'sobre': `<span class="text-cyber-cyan">SAMUEL // Estudiante del master de AI & Big Data Engineer en Tajamar Tech</span><br>
+              Apasionado por el desarrollo de software, la ingeniería de datos y la inteligencia artificial, con especial interés en el desarrollo backend, las bases de datos y la creación de soluciones tecnológicas eficientes y escalables.`,
+
+    'skills': `<span class="text-cyber-cyan">HABILIDADES TÉCNICAS:</span><br>
+                [Desarrollo Backend]: Java, Spring Boot, Python, Programación Orientada a Objetos, APIs REST<br>
+                [Bases de Datos]: SQL, SQL Server, Azure SQL, PostgreSQL, MySQL, Supabase<br>
+                [Datos e IA]: Python, Búsqueda Vectorial, Embeddings, Ollama, SQL Server Vector Search<br>
+                [Desarrollo Web]: HTML, CSS, JavaScript, Angular<br>
+                [Cloud y DevOps]: Microsoft Azure, Git, GitHub, Git Flow, Docker<br>
+                [Metodologías]: Scrum, Programación Modular, Patrones de Diseño, Trabajo en Equipo`,
+
+    'proyectos': `<span class="text-cyber-cyan">PROYECTOS DESTACADOS:</span><br>
+                1. <strong class="text-emerald-400">CalcUp</strong> - Aplicación Android desarrollada con Kotlin y Supabase, con gestión de usuarios, ejercicios y clasificación de puntuaciones.<br>
+                2. <strong class="text-emerald-400">Proyecto DP-800</strong> - Aplicación web con Python, FastAPI y SQL Server, centrada en la búsqueda semántica mediante embeddings.`,
+
+    'educacion': `<span class="text-cyber-cyan">FORMACIÓN ACADÉMICA:</span><br>
+                - <strong class="text-emerald-400">Máster en IA & Big Data</strong> - Tajamar Tech (Madrid)<br>
+                - <strong class="text-emerald-400">Técnico Superior DAM</strong> - IES Europa (Rivas-Vaciamadrid)<br>
+                - <strong class="text-emerald-400">Bachillerato</strong> - IES Europa (Rivas-Vaciamadrid)`,
+
+    'contacto': `<span class="text-cyber-cyan">MÉTODOS DE CONTACTO:</span><br>
+                - Email: <a href="mailto:Romansami40@gmail.com" class="text-emerald-400 hover:underline">Romansami40@gmail.com</a><br>
+                - GitHub: <a href="https://github.com/istoo11" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline">github.com/istoo11</a><br>
+                - LinkedIn: <a href="https://es.linkedin.com/in/samuel-roman-carrasco-656a29238" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline">LinkedIn Samuel Roman</a>`,
+
+    'sudo contratar': `<span class="text-cyber-emerald font-bold">&gt;&gt; PROTOCOLO DE CONTRATACIÓN ACTIVADO.</span><br>
+                    Samuel está abierto a nuevas oportunidades profesionales en desarrollo de software, backend, bases de datos e ingeniería de datos. Si buscas un perfil con ganas de aprender, crecer y aportar a un equipo tecnológico, puedes contactar con él a través de su correo electrónico o LinkedIn.`,
 };
+
 
 function printToTerminal(html, isCommand = false) {
     const div = document.createElement('div');
+
     if (isCommand) {
         div.innerHTML = `<span class="text-cyber-cyan font-bold">samuel@portfolio:~$</span> ${html}`;
     } else {
         div.innerHTML = html;
     }
+
     terminalOutput.appendChild(div);
     terminalOutput.scrollTop = terminalOutput.scrollHeight;
 }
 
+
 function handleCommand(e) {
     e.preventDefault();
+
     const cmd = terminalInput.value.trim().toLowerCase();
     if (!cmd) return;
 
@@ -82,20 +97,49 @@ function handleCommand(e) {
     }
 }
 
+
 function runCommand(cmdText) {
     terminalInput.value = cmdText;
     const fakeEvent = { preventDefault: () => {} };
     handleCommand(fakeEvent);
 }
 
+
 function clearTerminal() {
     terminalOutput.innerHTML = '';
-    printToTerminal('<span class="text-cyber-dim">Terminal buffer cleared. Type <span class="text-cyber-cyan">help</span> for commands.</span>');
+    printToTerminal('<span class="text-cyber-dim">Buffer de terminal limpiado. Escribe <span class="text-cyber-cyan">ayuda</span> para ver los comandos disponibles.</span>');
 }
 
+// Contact form - WhatsApp integration
 function submitContactForm(e) {
     e.preventDefault();
-    printToTerminal('<span class="text-cyber-emerald">&gt;&gt; Transmission encrypted and sent successfully! Samuel will respond shortly.</span>', false);
-    alert('Transmission sent successfully! Samuel will receive your message via encrypted channel.');
+
+    const name = document.getElementById('contact-name').value.trim();
+    const email = document.getElementById('contact-email').value.trim();
+    const message = document.getElementById('contact-message').value.trim();
+
+    if (!name || !email || !message) {
+        alert('Por favor, completa todos los campos.');
+        return;
+    }
+
+    // Construir el mensaje de WhatsApp
+    const whatsappMessage =
+        `¡Hola Samuel! He contactado contigo desde tu portfolio.\n\n` +
+        `👤 Nombre: ${name}\n` +
+        `📧 Email: ${email}\n\n` +
+        `💬 Mensaje:\n${message}`;
+
+    const phone = "652093039";
+
+    const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+
+    printToTerminal(
+        '<span class="text-cyber-emerald">&gt;&gt; WhatsApp transmission initialized successfully!</span>',
+        false
+    );
+    
     e.target.reset();
 }

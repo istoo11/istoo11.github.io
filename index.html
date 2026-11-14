@@ -138,7 +138,7 @@
                 <h2 class="font-orbitron text-2xl font-bold flex items-center gap-3">
                     <span class="text-cyber-cyan">// 02.</span> TERMINAL INTERACTIVO
                 </h2>
-                <span class="text-xs text-cyber-dim hidden sm:inline">Escribe <code class="text-cyber-cyan">help</code> para ver los comandos disponibles</span>
+                <span class="text-xs text-cyber-dim hidden sm:inline">Escribe <code class="text-cyber-cyan">ayuda</code> para ver los comandos disponibles</span>
             </div>
 
             <div class="glass-panel rounded-lg border border-cyber-cyan/40 shadow-neon-cyan overflow-hidden">
@@ -151,21 +151,21 @@
                         <span class="ml-2 font-mono text-cyber-dim">samuel@portfolio-sh:~# bash</span>
                     </div>
                     <button onclick="clearTerminal()" class="text-cyber-dim hover:text-cyber-cyan transition-colors text-xs flex items-center gap-1">
-                        <i class="fa-solid fa-rotate-right"></i> CLEAR
+                        <i class="fa-solid fa-rotate-right"></i> RESET
                     </button>
                 </div>
 
                 <!-- Terminal Output Window -->
                 <div id="terminal-output" class="p-4 sm:p-6 font-mono text-xs sm:text-sm h-72 sm:h-96 overflow-y-auto space-y-3 bg-cyber-bg/90">
-                    <div class="text-cyber-dim">Bienvenido a SamuelOS v4.2.0 [Núcleo de IA y Big Data].</div>
-                    <div class="text-cyber-dim">Escribe <span class="text-cyber-cyan font-bold">help</span> para ver los comandos disponibles o haz clic en las sugerencias rápidas a continuación.</div>
+                    <div class="text-cyber-dim">Bienvenido a SamuelOS v1.0 [Núcleo de IA y Big Data].</div>
+                    <div class="text-cyber-dim">Escribe <span class="text-cyber-cyan font-bold">ayuda</span> para ver los comandos disponibles o haz clic en las sugerencias rápidas a continuación.</div>
                     <div class="text-cyber-emerald">&gt; Sistema inicializado correctamente. Listo para recibir entradas...</div>
                 </div>
 
                 <!-- Terminal Input Form -->
                 <form id="terminal-form" onsubmit="handleCommand(event)" class="bg-cyber-card p-3 border-t border-cyber-border flex items-center gap-2">
                     <span class="text-cyber-cyan font-bold">samuel@portfolio:~$</span>
-                    <input type="text" id="terminal-input" autocomplete="off" autofocus class="bg-transparent flex-1 focus:outline-none text-cyber-cyan font-mono text-sm" placeholder="try 'ayuda', 'skills', 'proje', 'contacto'...">
+                    <input type="text" id="terminal-input" autocomplete="off" class="bg-transparent flex-1 focus:outline-none text-cyber-cyan font-mono text-sm" placeholder="Prueba 'ayuda', 'skills', 'proje', 'contacto'...">
                     <button type="submit" class="px-4 py-1.5 bg-cyber-cyan/20 border border-cyber-cyan text-cyber-cyan hover:bg-cyber-cyan hover:text-black font-orbitron text-xs rounded transition-all">
                         EXEC
                     </button>
@@ -176,7 +176,7 @@
                     <span class="text-cyber-dim self-center">Ejecucion rápida:</span>
                     <button type="button" onclick="runCommand('ayuda')" class="px-2.5 py-1 rounded bg-cyber-card border border-cyber-border text-cyber-cyan hover:border-cyber-cyan transition-all">ayuda</button>
                     <button type="button" onclick="runCommand('skills')" class="px-2.5 py-1 rounded bg-cyber-card border border-cyber-border text-cyber-cyan hover:border-cyber-cyan transition-all">skills</button>
-                    <button type="button" onclick="runCommand('projectos')" class="px-2.5 py-1 rounded bg-cyber-card border border-cyber-border text-cyber-cyan hover:border-cyber-cyan transition-all">proyectos</button>
+                    <button type="button" onclick="runCommand('proyectos')" class="px-2.5 py-1 rounded bg-cyber-card border border-cyber-border text-cyber-cyan hover:border-cyber-cyan transition-all">proyectos</button>
                     <button type="button" onclick="runCommand('educacion')" class="px-2.5 py-1 rounded bg-cyber-card border border-cyber-border text-cyber-cyan hover:border-cyber-cyan transition-all">educacion</button>
                     <button type="button" onclick="runCommand('contacto')" class="px-2.5 py-1 rounded bg-cyber-card border border-cyber-border text-cyber-cyan hover:border-cyber-cyan transition-all">contacto</button>
                     <button type="button" onclick="runCommand('sudo contratar')" class="px-2.5 py-1 rounded bg-cyber-card border border-cyber-emerald text-cyber-emerald hover:bg-cyber-emerald hover:text-black transition-all">sudo contratar</button>
@@ -468,95 +468,98 @@
             </div>
         </section>
 
-        <!-- 4. Featured Projects Section -->
+        <!-- 04. Sección de proyectos destacados -->
         <section id="projects" class="space-y-8">
             <div class="flex items-center justify-between border-b border-cyber-cyan/30 pb-4">
                 <h2 class="font-orbitron text-2xl font-bold flex items-center gap-3">
-                    <span class="text-cyber-cyan">// 04.</span> FEATURED PROJECTS & PIPELINES
+                    <span class="text-cyber-cyan">// 04.</span> PROYECTOS DESTACADOS
                 </h2>
-                <span class="text-xs text-cyber-dim">SECURE REPOSITORIES</span>
+                <span class="text-xs text-cyber-dim">REPOSITORIOS GITHUB</span>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Project 1: CalcUp -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Proyecto 1: CalcUp -->
                 <div class="glass-panel rounded-xl border border-cyber-cyan/40 overflow-hidden flex flex-col justify-between group shadow-neon-cyan">
                     <div class="p-6 space-y-4">
                         <div class="flex justify-between items-start">
-                            <span class="px-2.5 py-1 text-xs rounded bg-cyber-cyan/10 text-cyber-cyan border border-cyber-cyan/30 font-orbitron">MOBILE APP</span>
+                            <span class="px-2.5 py-1 text-xs rounded bg-cyber-cyan/10 text-cyber-cyan border border-cyber-cyan/30 font-orbitron">
+                                APLICACIÓN ANDROID
+                            </span>
                             <div class="flex space-x-2 text-cyber-dim">
-                                <i class="fa-brands fa-kotlin text-xl text-purple-400"></i>
+                                <i class="fa-brands fa-android text-xl text-green-400"></i>
                                 <i class="fa-solid fa-database text-xl text-emerald-400"></i>
                             </div>
                         </div>
-                        <h3 class="font-orbitron text-xl font-bold text-white group-hover:text-cyber-cyan transition-colors">CalcUp (Kotlin/Supabase)</h3>
+
+                        <h3 class="font-orbitron text-xl font-bold text-white group-hover:text-cyber-cyan transition-colors">
+                            CalcUp
+                        </h3>
+
                         <p class="text-xs text-cyber-dim leading-relaxed">
-                            Advanced multi-functional calculation & productivity Android application built with modern Kotlin. Features real-time cloud sync powered by Supabase, secure authentication, and sleek cyberpunk UI.
+                            Aplicación Android educativa desarrollada con Kotlin para el aprendizaje y la práctica de matemáticas.
+                            Incluye ejercicios interactivos, gestión de usuarios y un sistema de clasificación de puntuaciones.
+                            Utiliza Supabase como backend para la autenticación y gestión de datos en la nube.
                         </p>
+
                         <div class="flex flex-wrap gap-2 pt-2">
-                            <span class="px-2 py-0.5 text-[10px] bg-cyber-card border border-cyber-border rounded text-cyber-cyan">Kotlin</span>
+                            <span class="px-2 py-0.5 text-[10px] bg-cyber-card border border-cyber-border rounded text-purple-400">Kotlin</span>
                             <span class="px-2 py-0.5 text-[10px] bg-cyber-card border border-cyber-border rounded text-cyber-emerald">Supabase</span>
-                            <span class="px-2 py-0.5 text-[10px] bg-cyber-card border border-cyber-border rounded text-purple-400">PostgreSQL</span>
+                            <span class="px-2 py-0.5 text-[10px] bg-cyber-card border border-cyber-border rounded text-cyber-cyan">PostgreSQL</span>
+                            <span class="px-2 py-0.5 text-[10px] bg-cyber-card border border-cyber-border rounded text-yellow-400">XML</span>
                         </div>
                     </div>
+
                     <div class="p-4 bg-cyber-card/50 border-t border-cyber-border flex justify-between items-center text-xs">
-                        <span class="text-cyber-emerald flex items-center gap-1"><i class="fa-solid fa-circle text-[8px]"></i> Production Ready</span>
-                        <a href="https://github.com" target="_blank" class="px-3 py-1.5 bg-cyber-cyan/20 border border-cyber-cyan text-cyber-cyan hover:bg-cyber-cyan hover:text-black rounded font-orbitron transition-all">
+                        <span class="text-cyber-emerald flex items-center gap-1">
+                            <i class="fa-solid fa-circle text-[8px]"></i> Proyecto personal
+                        </span>
+                        <a href="https://github.com/istoo11/CalcUp" target="_blank" rel="noopener noreferrer"
+                        class="px-3 py-1.5 bg-cyber-cyan/20 border border-cyber-cyan text-cyber-cyan hover:bg-cyber-cyan hover:text-black rounded font-orbitron transition-all">
                             GITHUB <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Project 2: Big Data AI Pipeline -->
+                <!-- Proyecto 2: DP-800 -->
                 <div class="glass-panel rounded-xl border border-cyber-emerald/40 overflow-hidden flex flex-col justify-between group shadow-neon-emerald">
                     <div class="p-6 space-y-4">
                         <div class="flex justify-between items-start">
-                            <span class="px-2.5 py-1 text-xs rounded bg-cyber-emerald/10 text-cyber-emerald border border-cyber-emerald/30 font-orbitron">BIG DATA PIPELINE</span>
+                            <span class="px-2.5 py-1 text-xs rounded bg-cyber-emerald/10 text-cyber-emerald border border-cyber-emerald/30 font-orbitron">
+                                BASES DE DATOS E IA
+                            </span>
                             <div class="flex space-x-2 text-cyber-dim">
-                                <i class="fa-solid fa-bolt text-xl text-yellow-400"></i>
-                                <i class="fa-brands fa-python text-xl text-cyber-cyan"></i>
+                                <i class="fa-brands fa-python text-xl text-yellow-400"></i>
+                                <i class="fa-solid fa-brain text-xl text-cyber-emerald"></i>
                             </div>
                         </div>
-                        <h3 class="font-orbitron text-xl font-bold text-white group-hover:text-cyber-emerald transition-colors">Distributed Data Lake & AI Ingestion</h3>
-                        <p class="text-xs text-cyber-dim leading-relaxed">
-                            High-throughput data engineering pipeline built with Azure Databricks and Apache Spark. Ingests millions of streaming events, cleans anomalies with Python ML models, and indexes into analytical storage.
-                        </p>
-                        <div class="flex flex-wrap gap-2 pt-2">
-                            <span class="px-2 py-0.5 text-[10px] bg-cyber-card border border-cyber-border rounded text-yellow-400">Databricks</span>
-                            <span class="px-2 py-0.5 text-[10px] bg-cyber-card border border-cyber-border rounded text-cyber-cyan">PySpark</span>
-                            <span class="px-2 py-0.5 text-[10px] bg-cyber-card border border-cyber-border rounded text-cyber-emerald">Azure Cloud</span>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-cyber-card/50 border-t border-cyber-border flex justify-between items-center text-xs">
-                        <span class="text-cyber-cyan flex items-center gap-1"><i class="fa-solid fa-circle text-[8px]"></i> Scaled Cluster</span>
-                        <a href="https://github.com" target="_blank" class="px-3 py-1.5 bg-cyber-emerald/20 border border-cyber-emerald text-cyber-emerald hover:bg-cyber-emerald hover:text-black rounded font-orbitron transition-all">
-                            GITHUB <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
-                        </a>
-                    </div>
-                </div>
 
-                <!-- Project 3: Neural Spring Boot Microservices -->
-                <div class="glass-panel rounded-xl border border-cyber-purple/40 overflow-hidden flex flex-col justify-between group shadow-neon-purple">
-                    <div class="p-6 space-y-4">
-                        <div class="flex justify-between items-start">
-                            <span class="px-2.5 py-1 text-xs rounded bg-cyber-purple/10 text-cyber-purple border border-cyber-purple/30 font-orbitron">BACKEND CORE</span>
-                            <div class="flex space-x-2 text-cyber-dim">
-                                <i class="fa-solid fa-cube text-xl text-purple-400"></i>
-                                <i class="fa-brands fa-docker text-xl text-blue-400"></i>
-                            </div>
-                        </div>
-                        <h3 class="font-orbitron text-xl font-bold text-white group-hover:text-cyber-purple transition-colors">Neural API Gateway & Spring Microservices</h3>
+                        <h3 class="font-orbitron text-xl font-bold text-white group-hover:text-cyber-emerald transition-colors">
+                            Proyecto DP-800 - Búsqueda Semántica
+                        </h3>
+
                         <p class="text-xs text-cyber-dim leading-relaxed">
-                            Enterprise-grade Java Spring Boot microservice architecture containerized with Docker. Implements secure JWT authentication, reactive REST APIs, and automated CI/CD deployment workflows.
+                            Aplicación web desarrollada para poner en práctica los conocimientos adquiridos en la certificación DP-800.
+                            Implementa un sistema de búsqueda semántica de ejercicios mediante embeddings y búsqueda vectorial
+                            en SQL Server, integrando un backend con Python y FastAPI y modelos de IA locales mediante Ollama.
                         </p>
+
                         <div class="flex flex-wrap gap-2 pt-2">
-                            <span class="px-2 py-0.5 text-[10px] bg-cyber-card border border-cyber-border rounded text-purple-400">Spring Boot</span>
-                            <span class="px-2 py-0.5 text-[10px] bg-cyber-card border border-cyber-border rounded text-blue-400">Docker</span>
-                            <span class="px-2 py-0.5 text-[10px] bg-cyber-card border border-cyber-border rounded text-cyber-cyan">Java</span>
+                            <span class="px-2 py-0.5 text-[10px] bg-cyber-card border border-cyber-border rounded text-yellow-400">Python</span>
+                            <span class="px-2 py-0.5 text-[10px] bg-cyber-card border border-cyber-border rounded text-cyber-cyan">FastAPI</span>
+                            <span class="px-2 py-0.5 text-[10px] bg-cyber-card border border-cyber-border rounded text-cyber-emerald">SQL Server</span>
+                            <span class="px-2 py-0.5 text-[10px] bg-cyber-card border border-cyber-border rounded text-purple-400">Embeddings</span>
+                            <span class="px-2 py-0.5 text-[10px] bg-cyber-card border border-cyber-border rounded text-blue-400">Ollama</span>
+                            <span class="px-2 py-0.5 text-[10px] bg-cyber-card border border-cyber-border rounded text-cyber-cyan">Azure</span>
                         </div>
                     </div>
+
                     <div class="p-4 bg-cyber-card/50 border-t border-cyber-border flex justify-between items-center text-xs">
-                        <span class="text-cyber-purple flex items-center gap-1"><i class="fa-solid fa-circle text-[8px]"></i> Active Service</span>
-                        <a href="https://github.com" target="_blank" class="px-3 py-1.5 bg-cyber-purple/20 border border-cyber-purple text-cyber-purple hover:bg-cyber-purple hover:text-white rounded font-orbitron transition-all">
+                        <span class="text-cyber-emerald flex items-center gap-1">
+                            <i class="fa-solid fa-circle text-[8px]"></i> Proyecto personal
+                        </span>
+                        <a href="https://github.com/istoo11/Proyecto_DP-800" target="_blank" rel="noopener noreferrer"
+                        class="px-3 py-1.5 bg-cyber-emerald/20 border border-cyber-emerald text-cyber-emerald hover:bg-cyber-emerald hover:text-black rounded font-orbitron transition-all">
                             GITHUB <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
                         </a>
                     </div>
@@ -564,60 +567,151 @@
             </div>
         </section>
 
-        <!-- 5. Education & Experience Timeline -->
+        <!-- 05. Línea temporal de educación y experiencia -->
         <section id="timeline" class="space-y-8">
             <div class="flex items-center justify-between border-b border-cyber-cyan/30 pb-4">
                 <h2 class="font-orbitron text-2xl font-bold flex items-center gap-3">
-                    <span class="text-cyber-cyan">// 05.</span> ACADEMIC & CAREER TIMELINE
+                    <span class="text-cyber-cyan">// 05.</span> FORMACIÓN Y EXPERIENCIA
                 </h2>
-                <span class="text-xs text-cyber-emerald">CHRONOLOGICAL LOG</span>
+                <span class="text-xs text-cyber-emerald">TRAYECTORIA PROFESIONAL</span>
             </div>
 
             <div class="relative border-l-2 border-cyber-cyan/30 ml-4 md:ml-8 space-y-10 pl-6 md:pl-10">
-                <!-- Timeline Item 1 -->
+
+                <!-- Timeline Item 1: Máster -->
                 <div class="relative group">
                     <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-cyber-bg border-2 border-cyber-cyan group-hover:bg-cyber-cyan transition-colors"></div>
+
                     <div class="glass-panel p-6 rounded-xl border border-cyber-cyan/30 space-y-3">
                         <div class="flex flex-wrap justify-between items-center text-xs text-cyber-dim">
                             <span class="text-cyber-cyan font-orbitron font-bold">TAJAMAR TECH // MADRID</span>
-                            <span class="px-2 py-0.5 rounded bg-cyber-cyan/10 text-cyber-cyan border border-cyber-cyan/30">2025 - PRESENT</span>
+                            <span class="px-2 py-0.5 rounded bg-cyber-cyan/10 text-cyber-cyan border border-cyber-cyan/30">
+                                EN CURSO
+                            </span>
                         </div>
-                        <h3 class="font-orbitron text-lg font-bold text-white">Master's Degree in AI & Big Data</h3>
+
+                        <h3 class="font-orbitron text-lg font-bold text-white">
+                            Máster en Inteligencia Artificial y Big Data
+                        </h3>
+
                         <p class="text-xs text-cyber-dim leading-relaxed">
-                            Specialized advanced training in distributed big data clusters, machine learning pipelines, deep neural networks, and modern enterprise data architectures.
+                            Formación especializada en tecnologías de Big Data, ingeniería de datos,
+                            inteligencia artificial y aprendizaje automático. Profundización en
+                            arquitecturas de datos, procesamiento de información y herramientas
+                            del ecosistema de datos.
                         </p>
                     </div>
                 </div>
 
-                <!-- Timeline Item 2 -->
+                <!-- Timeline Item 2: Métrica Consulting -->
                 <div class="relative group">
                     <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-cyber-bg border-2 border-cyber-emerald group-hover:bg-cyber-emerald transition-colors"></div>
+
                     <div class="glass-panel p-6 rounded-xl border border-cyber-emerald/30 space-y-3">
                         <div class="flex flex-wrap justify-between items-center text-xs text-cyber-dim">
-                            <span class="text-cyber-emerald font-orbitron font-bold">SOFTWARE ENGINEERING ACADEMY</span>
-                            <span class="px-2 py-0.5 rounded bg-cyber-emerald/10 text-cyber-emerald border border-cyber-emerald/30">GRADUATED</span>
+                            <span class="text-cyber-emerald font-orbitron font-bold">MÉTRICA CONSULTING // MADRID</span>
+                            <span class="px-2 py-0.5 rounded bg-cyber-emerald/10 text-cyber-emerald border border-cyber-emerald/30">
+                                4 MESES
+                            </span>
                         </div>
-                        <h3 class="font-orbitron text-lg font-bold text-white">DAM (Desarrollo de Aplicaciones Multiplataforma)</h3>
+
+                        <h3 class="font-orbitron text-lg font-bold text-white">
+                            Prácticas de Desarrollo de Software
+                        </h3>
+
                         <p class="text-xs text-cyber-dim leading-relaxed">
-                            Comprehensive professional degree in multiplatform software development. Mastered Java, Kotlin, databases, object-oriented design, and software testing methodologies.
+                            Experiencia en un entorno profesional de desarrollo de software,
+                            trabajando con Java y Spring Boot. Participación en proyectos
+                            utilizando metodologías ágiles como Scrum, control de versiones
+                            con Git y Git Flow, patrones de diseño y desarrollo de aplicaciones.
                         </p>
                     </div>
                 </div>
 
-                <!-- Timeline Item 3 -->
+                <!-- Timeline Item 3: DAM -->
                 <div class="relative group">
                     <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-cyber-bg border-2 border-cyber-purple group-hover:bg-cyber-purple transition-colors"></div>
+
                     <div class="glass-panel p-6 rounded-xl border border-cyber-purple/30 space-y-3">
                         <div class="flex flex-wrap justify-between items-center text-xs text-cyber-dim">
-                            <span class="text-cyber-purple font-orbitron font-bold">OPEN SOURCE & INNOVATION</span>
-                            <span class="px-2 py-0.5 rounded bg-cyber-purple/10 text-purple-400 border border-cyber-purple/30">ONGOING</span>
+                            <span class="text-cyber-purple font-orbitron font-bold">IES EUROPA // RIVAS-VACIAMADRID</span>
+                            <span class="px-2 py-0.5 rounded bg-cyber-purple/10 text-purple-400 border border-cyber-purple/30">
+                                FINALIZADO
+                            </span>
                         </div>
-                        <h3 class="font-orbitron text-lg font-bold text-white">Full-Stack AI & Cloud Developer</h3>
+
+                        <h3 class="font-orbitron text-lg font-bold text-white">
+                            Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)
+                        </h3>
+
                         <p class="text-xs text-cyber-dim leading-relaxed">
-                            Building innovative open-source tools, contributing to big data repositories, and creating production-ready applications integrating modern cloud infrastructure.
+                            Formación en desarrollo de aplicaciones multiplataforma,
+                            programación orientada a objetos, Java, Kotlin, Python,
+                            bases de datos relacionales, desarrollo de interfaces,
+                            acceso a datos y diseño de software.
                         </p>
                     </div>
                 </div>
+
+                <!-- Timeline Item 4: Bastia -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-cyber-bg border-2 border-yellow-400 group-hover:bg-yellow-400 transition-colors"></div>
+
+                    <div class="glass-panel p-6 rounded-xl border border-yellow-500/30 space-y-3">
+                        <div class="flex flex-wrap justify-between items-center text-xs text-cyber-dim">
+                            <span class="text-yellow-400 font-orbitron font-bold">BASTIA // DESARROLLO WEB</span>
+                            <span class="px-2 py-0.5 rounded bg-yellow-500/10 text-yellow-400 border border-yellow-500/30">
+                                2 SEMANAS
+                            </span>
+                        </div>
+
+                        <h3 class="font-orbitron text-lg font-bold text-white">
+                            Desarrollo Web para Inmobiliaria
+                        </h3>
+
+                        <p class="text-xs text-cyber-dim leading-relaxed">
+                            Colaboración en el desarrollo de una página web para Bastia,
+                            una inmobiliaria. Experiencia práctica en la creación de
+                            soluciones web y aplicación de conocimientos de desarrollo
+                            adquiridos durante la formación en DAM.
+                        </p>
+
+                        <div class="pt-3">
+                            <a href="https://bastiainmobiliaria.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 px-4 py-2 bg-yellow-500/20 border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black rounded font-orbitron text-xs transition-all">
+                                VISITAR WEB
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5: Bachillerato -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-cyber-bg border-2 border-cyber-cyan group-hover:bg-cyber-cyan transition-colors"></div>
+
+                    <div class="glass-panel p-6 rounded-xl border border-cyber-cyan/30 space-y-3">
+                        <div class="flex flex-wrap justify-between items-center text-xs text-cyber-dim">
+                            <span class="text-cyber-cyan font-orbitron font-bold">IES EUROPA // RIVAS-VACIAMADRID</span>
+                            <span class="px-2 py-0.5 rounded bg-cyber-cyan/10 text-cyber-cyan border border-cyber-cyan/30">
+                                FINALIZADO
+                            </span>
+                        </div>
+
+                        <h3 class="font-orbitron text-lg font-bold text-white">
+                            Bachillerato
+                        </h3>
+
+                        <p class="text-xs text-cyber-dim leading-relaxed">
+                            Formación académica previa a los estudios superiores,
+                            desarrollando competencias y conocimientos fundamentales
+                            para continuar mi trayectoria educativa.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -625,9 +719,9 @@
         <section id="contact" class="space-y-8">
             <div class="flex items-center justify-between border-b border-cyber-cyan/30 pb-4">
                 <h2 class="font-orbitron text-2xl font-bold flex items-center gap-3">
-                    <span class="text-cyber-cyan">// 06.</span> SECURE TRANSMISSION // CONTACT
+                    <span class="text-cyber-cyan">// 06.</span> CONTACTO
                 </h2>
-                <span class="text-xs text-cyber-cyan">ENCRYPTED CHANNEL</span>
+                <span class="text-xs text-cyber-cyan">CANAL ENCRIPTADO</span>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -638,29 +732,45 @@
                             <i class="fa-solid fa-envelope"></i>
                         </div>
                         <div>
-                            <span class="text-xs text-cyber-dim">DIRECT FREQUENCY (EMAIL)</span>
-                            <p class="font-orbitron text-white text-sm">samuel@ai-engineer.dev</p>
+                            <span class="text-xs text-cyber-dim">CONTACTO DIRECTO (EMAIL)</span>
+                            <p class="font-orbitron text-white text-sm">
+                                <a href="mailto:Romansami40@gmail.com"
+                                class="hover:text-cyber-cyan transition-colors cursor-pointer">
+                                    Romansami40@gmail.com
+                                </a>
+                            </p>
                         </div>
                     </div>
 
                     <div class="glass-panel p-6 rounded-xl border border-cyber-emerald/30 flex items-center space-x-4">
-                        <div class="w-12 h-12 rounded-lg bg-cyber-emerald/10 border border-cyber-emerald/40 flex items-center justify-center text-cyber-emerald text-xl">
-                            <i class="fa-brands fa-github"></i>
-                        </div>
-                        <div>
-                            <span class="text-xs text-cyber-dim">GITHUB REPOSITORY NETWORK</span>
-                            <a href="https://github.com" target="_blank" class="font-orbitron text-cyber-emerald text-sm hover:underline">github.com/samuel-ai</a>
-                        </div>
+                        <a href="https://github.com/istoo11" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center space-x-4 w-full group">
+                            <div class="w-12 h-12 rounded-lg bg-cyber-emerald/10 border border-cyber-emerald/40 flex items-center justify-center text-cyber-emerald text-xl group-hover:bg-cyber-emerald/20 transition-colors">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-cyber-dim">MIS REPOSITORIOS</span>
+                                <p class="font-orbitron text-cyber-emerald text-sm group-hover:underline">
+                                    github.com/istoo11
+                                </p>
+                            </div>
+                        </a>
                     </div>
 
                     <div class="glass-panel p-6 rounded-xl border border-cyber-purple/30 flex items-center space-x-4">
-                        <div class="w-12 h-12 rounded-lg bg-cyber-purple/10 border border-cyber-purple/40 flex items-center justify-center text-purple-400 text-xl">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </div>
-                        <div>
-                            <span class="text-xs text-cyber-dim">PROFESSIONAL NETWORK (LINKEDIN)</span>
-                            <a href="https://linkedin.com" target="_blank" class="font-orbitron text-purple-400 text-sm hover:underline">linkedin.com/in/samuel-ai-data</a>
-                        </div>
+                        <a href="https://es.linkedin.com/in/samuel-roman-carrasco-656a29238"
+                        target="_blank" rel="noopener noreferrer"
+                        class="flex items-center space-x-4 w-full group">
+                            <div class="w-12 h-12 rounded-lg bg-cyber-purple/10 border border-cyber-purple/40 flex items-center justify-center text-purple-400 text-xl group-hover:bg-cyber-purple/20 transition-colors">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-cyber-dim">RED PROFESIONAL (LINKEDIN)</span>
+                                <p class="font-orbitron text-purple-400 text-sm group-hover:underline">
+                                    linkedin.com/in/samuel-roman-carrasco-656a29238
+                                </p>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
@@ -669,18 +779,36 @@
                     <form onsubmit="submitContactForm(event)" class="space-y-4">
                         <div>
                             <label class="block text-xs font-orbitron text-cyber-cyan mb-2">SENDER IDENTIFIER (NAME):</label>
-                            <input type="text" required class="w-full bg-cyber-card border border-cyber-border rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyber-cyan transition-colors" placeholder="e.g. Commander Shepard">
+                            <input
+                                id="contact-name"
+                                type="text"
+                                required
+                                class="w-full bg-cyber-card border border-cyber-border rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyber-cyan transition-colors"
+                                placeholder="e.g. Commander Shepard">
                         </div>
                         <div>
                             <label class="block text-xs font-orbitron text-cyber-cyan mb-2">RETURN FREQUENCY (EMAIL):</label>
-                            <input type="email" required class="w-full bg-cyber-card border border-cyber-border rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyber-cyan transition-colors" placeholder="shepard@normandy.org">
+                            <input
+                                id="contact-email"
+                                type="email"
+                                required
+                                class="w-full bg-cyber-card border border-cyber-border rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyber-cyan transition-colors"
+                                placeholder="shepard@normandy.org">
                         </div>
                         <div>
                             <label class="block text-xs font-orbitron text-cyber-cyan mb-2">ENCRYPTED TRANSMISSION (MESSAGE):</label>
-                            <textarea rows="4" required class="w-full bg-cyber-card border border-cyber-border rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyber-cyan transition-colors" placeholder="Type your project proposal or inquiry here..."></textarea>
+                            <textarea
+                                id="contact-message"
+                                rows="4"
+                                required
+                                class="w-full bg-cyber-card border border-cyber-border rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyber-cyan transition-colors"
+                                placeholder="Type your project proposal or inquiry here..."></textarea>
                         </div>
-                        <button type="submit" class="w-full py-3 bg-cyber-cyan text-black font-orbitron font-bold rounded hover:bg-cyber-emerald transition-all shadow-neon-cyan flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-paper-plane"></i> TRANSMIT MESSAGE
+                        <button
+                            type="submit"
+                            class="w-full py-3 bg-cyber-cyan text-black font-orbitron font-bold rounded hover:bg-cyber-emerald transition-all shadow-neon-cyan flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            TRANSMIT MESSAGE
                         </button>
                     </form>
                 </div>
@@ -691,9 +819,9 @@
 
     <!-- Footer -->
     <footer class="border-t border-cyber-cyan/30 glass-panel py-8 mt-20 text-center text-xs text-cyber-dim space-y-2">
-        <p class="font-orbitron text-cyber-cyan">SAMUEL // AI & BIG DATA ENGINEER @ TAJAMAR TECH</p>
-        <p>Optimized for GitHub Pages &bull; Built with Tailwind CSS & Cyberpunk HUD Aesthetics</p>
-        <p class="text-[10px] text-cyber-emerald">&copy; 2026 Samuel. All systems nominal.</p>
+        <p class="font-orbitron text-cyber-cyan">SAMUEL // AI & BIG DATA ENGINEER</p>
+        <p>Optimized for GitHub Pages &bull; Built with Tailwind CSS</p>
+        <p class="text-[10px] text-cyber-emerald">&copy; 2026 Samuel.</p>
     </footer>
 
     <!-- Interactive JavaScript -->
